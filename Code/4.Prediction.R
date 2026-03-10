@@ -12,7 +12,6 @@ library(splines2)
 data.path <- save.path <- "~/"
 
 
-
 ### 1. read in the association estimates
 meta.coef <- readRDS(paste0(data.path,"Results/Results.2nd.1.est.rds"))
 meta.vcov <- readRDS(paste0(data.path,"Results/Results.2nd.2.vcov.rds"))
@@ -54,8 +53,7 @@ for(row.i in 1:num.temp.basis){
   }
 }
 colnames(cbtemp.coef.var) <- colnames(cbtemp.coef)
-cbtemp.coef.est.all <- rbind(cbtemp.coef.est.all, cbtemp.coef.est.single)
-cbtemp.coef.var.list[[ac.i]] <- cbtemp.coef.var.single
+
 
 
 
@@ -97,4 +95,4 @@ p <- ggplot()+
   ylab("Odds ratio at lag 0-6 days")+
   xlab("Daily mean temperature (°C)")
 ggsave(p, filename = paste0(save.path, "Results/Figure.Temp_mortality_curve_ac1300.tiff"),
-       width = 6.5, height = 5, unit = "in")
+       width = 6.5, height = 5, unit = "in") # 1 sec

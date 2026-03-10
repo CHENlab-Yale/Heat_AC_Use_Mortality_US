@@ -1,6 +1,8 @@
 # Heat_AC_Use_Mortality_US
 These sample codes and data are attached to the paper titled "Averted Heat-Related Mortality in the United States from Air Conditioning Usage" by Chu et al. In this paper, we designed a time-stratified case-crossover study combined with two-stage models to evaluate the role of household air conditioning (AC) usage in the temperature-mortality associations.
 
+We conducted the analyses in R-4.4.2. All files are expected to run within 1 minute on the sample data, respectively.
+
 ####### Sample data
 We are not allowed to disclose the real health data. We used the chicagoNMMAPS dataset from the "dlnm" package as sample data.
 
